@@ -27,7 +27,8 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 50px;
 }
 
 .searchbutton {
@@ -56,7 +57,7 @@ input.searchbutton:hover {
 
 
 
-a:visited {
+.panel-footer a:visited {
     color:#fff;
 }
 
@@ -79,6 +80,38 @@ a:visited {
             margin-top: 60px;   
         }
     }
+
+/* Horizontal panel */
+
+.panel.panel-horizontal {
+    display:table;
+    width:100%;
+    margin-top: 50px;
+}
+.panel.panel-horizontal > .panel-heading, .panel.panel-horizontal > .panel-body, .panel.panel-horizontal > .panel-footer {
+    display:table-cell;
+}
+.panel.panel-horizontal > .panel-heading, .panel.panel-horizontal > .panel-footer {
+    width: 25%;
+    border:0;
+    vertical-align: middle;
+}
+.panel.panel-horizontal > .panel-heading {
+    border-right: 1px solid #ddd;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+.panel.panel-horizontal > .panel-footer {
+    border-left: 1px solid #ddd;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+
+.panel-horizontal .panel-heading {
+    height: 200px;
+    background-size:cover; 
+    background-position:center;
+}
 
 form {
   width:500px;
@@ -192,5 +225,14 @@ a {
 a:hover {
   text-decoration: none;
   color: inherit;
-  background-color: white;
+  background-color: transparent;
 }
+
+.all-rooms-container {
+    margin-top: 50px;
+}
+
+.all-rooms-container a:visited {
+    color:#fff;
+}
+
