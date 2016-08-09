@@ -23,7 +23,7 @@
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: orange;    
+    color: #EEC74A;    
 }
 
 body {
@@ -129,42 +129,6 @@ input.button {
   color: grey;
 }
 
-.hotels {
-  text-align: center;
-  margin-top: 3em;
-}
-
-.hotel {
-    display: inline-block;
-    margin-left: 2em;
-    margin-right: 2em;
-    width:20em;
-    height:15em;
-    text-align:center;
-    border: 3px solid #f1f1f1;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    border-radius: 3px;
-}
-
-.hotel:before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:black;
-    opacity:0;
-    z-index:0;
-
-}
-
-.hotel:hover:before{
- opacity:.6;
- transition: all 0.5s;
-}
 
 .info {
   position: absolute;
