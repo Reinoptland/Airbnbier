@@ -5,7 +5,8 @@
   </div>
   
     <div class="jumbotron">
-        <div class="container">
+        <div class="container text-center">
+           <span class="typed"></span>
             <div class="search">
               <form>
                   <input class ="searchinput input" type="text" placeholder="Search..." required>
@@ -24,10 +25,11 @@
            
             <div class="col-md-4 col-sm-6 text-center">
                 <div class="panel panel-default">
-                   <a href="#">
+                  <%= link_to room do %>
                     <div class="panel-body" style="background-image:url('<%= room.image_url %>'); height: 200px;"><h1><%= room.name %></h1></div>
                    <div class="panel-footer">Price: €<%= room.price %></div>
-                   </a>
+                   <% end %>
+                   
                 </div>
             </div>
             
@@ -40,3 +42,16 @@
     <img class ="logo_footer" src="https://files.slack.com/files-pri/T1TPXC928-F1ZCLD4LF/airbnbier-logo.png" alt="logo">
     <p class="copyright">From the creators of Gitopoly	&copy; 2016</p>
   </div>
+  
+<script>
+    $(function(){
+        $(".typed").typed({
+            strings: ["Welcome to <strong>Airbnbier</strong>!", "Book awesome student housing!"],
+            typeSpeed: 10,
+            startDelay: 1000,
+            backDelay: 2000,
+            contentType: 'html',
+            loop: true
+        });
+    });
+</script>
