@@ -18,9 +18,9 @@ Room.create([
   ])
 
 Booking.create([
-  {title: "Booking 1", start_date: "2016-09-09 13:33:12" , end_date: "2016-09-12 13:33:12",},
-  {title: "Booking 2", start_date: "2016-09-10 13:33:12" , end_date: "2016-09-12 13:33:12",},
-  {title: "Booking 3", start_date: "2016-09-20 13:33:12" , end_date: "2016-09-21 13:33:12",},
-  {title: "Booking 4", start_date: "2016-09-12 13:33:12" , end_date: "2016-09-23 13:33:12",},
-  {title: "Booking 5", start_date: "2016-09-14 13:33:12" , end_date: "2016-09-19 13:33:12",},
+  {title: "Booking 1", start_date: "2016-09-09 13:33:12" , end_date: "2016-09-12 13:33:12", room_id: 1, },
+  {title: "Booking 2", start_date: "2016-09-10 13:33:12" , end_date: "2016-09-12 13:33:12", room_id: 2, },
+  {title: "Booking 3", start_date: "2016-09-20 13:33:12" , end_date: "2016-09-21 13:33:12", room_id: 1, },
+  {title: "Booking 4", start_date: "2016-09-12 13:33:12" , end_date: "2016-09-23 13:33:12", room_id: 3, },
+  {title: "Booking 5", start_date: "2016-09-14 13:33:12" , end_date: "2016-09-19 13:33:12", room_id: 5, },
   ])
