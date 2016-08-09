@@ -1,33 +1,85 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Rooms</h1>
+  <div class="background">
+    <div class="header">
+      <img class ="logo" src="https://files.slack.com/files-pri/T1TPXC928-F1ZCLD4LF/airbnbier-logo.png" alt="logo">
+      <ul>
+        <li>Login</li>
+        <li>Sign Up</li>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="search">
+      <form>
+          <input class ="searchinput input" type="text" placeholder="Search..." required>
+          <input class ="input date" type="date" placeholder="From" required>
+          <input class ="input date" type="date" placeholder="To" required>
+          <input class="searchbutton" type="button" value="Search">
+      </form>
+    </div>
+  </div>
 
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= room.name %></td>
-        <td><%= room.description %></td>
-        <td><%= room.price %></td>
-        <td><%= room.image_url %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="hotels">
+    <div class="hotelrow">
 
-<br>
+        <a href="/hotel1">
+          <div class="hotel" style="background-image:url('https://hd.unsplash.com/photo-1444201983204-c43cbd584d93')">
+              <h2>hotel1</h2>
+              <div class="info">
+                <p class="price">Price:  <span class="amount">&euro;49,00</span></p>
+              </div>
+          </div>
+        </a>
 
-<%= link_to 'New Room', new_room_path %>
+        <a href="/hotel2">
+          <div class="hotel" style="background-image:url('https://hd.unsplash.com/photo-1444201983204-c43cbd584d93')">
+              <h2>hotel2</h2>
+              <div class="info">
+                <p class="price">Price:  <span class="amount">&euro;45,00</span></p>
+              </div>
+          </div>
+        </a>
+
+        <a href="/hotel3">
+          <div class="hotel" style="background-image:url('https://hd.unsplash.com/photo-1444201983204-c43cbd584d93')">
+              <h2>hotel3</h2>
+              <div class="info">
+                <p class="price">Price:  <span class="amount">&euro;51,00</span></p>
+              </div>
+          </div>
+        </a>
+    </div>
+  </div>
+
+  <div class="hotels">
+    <div class="hotelrow">
+      <a href="/hotel4">
+        <div class="hotel" style="background-image:url('https://hd.unsplash.com/photo-1444201983204-c43cbd584d93')">
+            <h2>hotel4</h2>
+            <div class="info">
+              <p class="price">Price:  <span class="amount">&euro;35,00</span></p>
+            </div>
+        </div>
+      </a>
+      <a href="/hotel5">
+        <div class="hotel" style="background-image:url('https://hd.unsplash.com/photo-1444201983204-c43cbd584d93')">
+            <h2>hotel5</h2>
+            <div class="info">
+              <p class="price">Price:  <span class="amount">&euro;40,00</span></p>
+            </div>
+        </div>
+      </a>
+
+      <a href="/hotel6">
+        <div class="hotel" style="background-image:url('https://hd.unsplash.com/photo-1444201983204-c43cbd584d93')">
+            <h2>hotel6</h2>
+            <div class="info">
+              <p class="price">Price:  <span class="amount">&euro;30,00</span></p>
+            </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img class ="logo_footer" src="https://files.slack.com/files-pri/T1TPXC928-F1ZCLD4LF/airbnbier-logo.png" alt="logo">
+    <p class="copyright">From the creators of Gitopoly	&copy; 2016</p>
+  </div>
