@@ -11,6 +11,10 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
+  def list_all_rooms_price_asc
+    @rooms = Room.all
+  end
+
   # GET /rooms/1
   # GET /rooms/1.json
   def show

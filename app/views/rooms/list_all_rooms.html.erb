@@ -4,7 +4,7 @@
 <div class="container all-rooms-container">
 
 <%= link_to 'Add new Room', new_room_path, :class => "btn btn-success btn-block" %>
-  <% @rooms = @rooms.order_by_price_asc %>
+
  <% @rooms.each do |room| %>
 <div class="panel panel-default panel-horizontal">
     <div class="panel-heading" style="background-image:url('<%= room.image_url %>');">
