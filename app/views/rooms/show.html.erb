@@ -1,29 +1,40 @@
+
+<div class="container">
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @room.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @room.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @room.price %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @room.image_url %>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to 'Go back to All Rooms', all_rooms_path %>
 
 
 
-<h1>New booking</h1>
-<%= render 'bookings/form', booking: @booking %>
+<h1><%= @room.name %></h1>
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="thumbnail">
+      <img src="<%= @room.image_url %>" alt="...">
+
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <div class="caption text-center">
+       <h3><%= @room.name %></h3>
+        <p><%= @room.description %></p>
+        <p>€ <%= @room.price.round %> per/day</p>
+        <%= render 'bookings/form', booking: @booking %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
