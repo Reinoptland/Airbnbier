@@ -12,13 +12,17 @@ class RoomsController < ApplicationController
   end
 
   def list_all_rooms_price_asc
-    @rooms = Room.all
+    @rooms = Room.order_by_price_asc
+  end
+
+  def list_all_rooms_price_desc
+    @rooms = Room.order_by_price_desc
   end
 
   # GET /rooms/1
   # GET /rooms/1.json
   def show
-      @booking = Booking.new({room_id: params[:id]})     
+      @booking = Booking.new({room_id: params[:id]})
       @disabled = Room.find(params[:id]).taken_dates
   end
 
