@@ -8,7 +8,7 @@ class Room < ApplicationRecord
     def self.order_by_price_asc
         order(price: :asc)
     end
-    
+
     def taken_dates
         dates = []
         self.bookings.each { |booking|
@@ -17,5 +17,5 @@ class Room < ApplicationRecord
         }
         dates.flatten
     end
-    
+
 end
