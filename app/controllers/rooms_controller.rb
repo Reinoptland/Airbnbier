@@ -18,7 +18,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
-      @booking = Booking.new({room_id: params[:id]})     
+      @booking = Booking.new({room_id: params[:id]})
       @disabled = Room.find(params[:id]).taken_dates
   end
 
@@ -79,6 +79,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:name, :description, :price, :image_url)
+      params.require(:room).permit(:name, :description, :price, :image_url, :location_id)
     end
 end
