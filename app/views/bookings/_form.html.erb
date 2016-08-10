@@ -36,12 +36,24 @@
 <script>
 
     $(function(){
+        
+        var array = ["2016-08-10","2016-08-11"]
+        
         $('.end_date').datepicker({
-          dateFormat: "yy-mm-dd"
+            dateFormat: "yy-mm-dd",
+            beforeShowDay: function(date) {
+            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+            return [ array.indexOf(string) == -1 ]
+        }
+            
         });
         
         $('.start_date').datepicker({
-          dateFormat: "yy-mm-dd"
+            dateFormat: "yy-mm-dd",
+            beforeShowDay: function(date) {
+            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+            return [ array.indexOf(string) == -1 ]
+        }
         });
     });
 
