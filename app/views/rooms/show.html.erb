@@ -28,6 +28,7 @@
     <div class="thumbnail">
       <div class="caption text-center">
        <h3><%= @room.name %></h3>
+       <p><%= @location %></p>
         <p><%= @room.description %></p>
         <p>€ <%= @room.price.round %> per/day</p>
         <%= render 'bookings/form', booking: @booking %>
