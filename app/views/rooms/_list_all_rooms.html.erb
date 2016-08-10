@@ -1,0 +1,30 @@
+
+
+<div class="container all-rooms-container">
+
+<%= link_to 'Add new Room', new_room_path, :class => "btn btn-success btn-block" %>
+<% @rooms.each do |room| %>
+    <div class="panel panel-default panel-horizontal">
+        <div class="panel-heading" style="background-image:url('<%= room.image_url %>');">
+        </div>
+        <div class="panel-body">
+            <h3><%= room.name %></h3>
+            <p><%= room.description %></p>
+            <p>Price: €<%= room.price.round %> per/day</p>
+            </div>
+        <div class="panel-footer">
+            <p><%= link_to 'Show', room, :class => "btn btn-success btn-block" %></p>
+            <p><%= link_to 'Edit', edit_room_path(room), :class => "btn btn-primary btn-block" %></p>
+            <p><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-block" %></p>
+        </div>
+    </div>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+
+</div>
