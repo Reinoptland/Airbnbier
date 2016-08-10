@@ -10,11 +10,10 @@
       </ul>
     </div>
   <% end %>
+  
+  <%= f.hidden_field :room_id, value: booking.room_id %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+
 
   <div class="field">
     <%= f.label :start_date %>
@@ -37,7 +36,8 @@
 
     $(function(){
         
-        var array = ["2016-08-10","2016-08-11"]
+        var array = '<%= @disabled.to_json %>';
+        array.replace(/&quot;/g, '"');
         
         $('.end_date').datepicker({
             dateFormat: "yy-mm-dd",
