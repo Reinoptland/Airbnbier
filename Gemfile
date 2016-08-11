@@ -51,3 +51,4 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem "typedjs-rails", "~> 1.0.4"
 gem 'jquery-ui-rails'
 gem 'devise'
+gem 'validates_timeliness'
