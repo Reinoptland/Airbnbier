@@ -1,13 +1,26 @@
-<div class="jumbotron">
+  <div class="jumbotron">
         <div class="container-fluid text-center">
            <span class="typed"></span>
             <div class="search">
-              <form>
-                  <input class ="searchinput input" type="text" placeholder="Search..." required>
-                  <input class ="input date" type="date" placeholder="From" required>
-                  <input class ="input date" type="date" placeholder="To" required>
-                  <input class="searchbutton" type="button" value="Search">
-              </form>
+              <div class="col-xs-6 col-xs-offset-3">
+                <%= form_tag do %>
+                  <%= select_tag(:location_id, options_from_collection_for_select(Location.all, :id, :name),:include_blank => 'Select a city', :class => 'form-control input-medium', :onChange=>"getOpt(this)") %>
+                    <div class="button-plans">
+                        <a id="abc" class="btn btn-info" href="something"> Go! </a>
+                    </div>
+                <% end %>
+              </div>
             </div>
         </div>
     </div>
+
+<script>
+    function getOpt(city) {
+
+    if (city.value == 1) { document.getElementById("abc").href="amsterdam";}
+    else if (city.value == 2) { document.getElementById("abc").href="utrecht";}
+    else if (city.value == 3) { document.getElementById("abc").href="denhaag"; }
+    else if (city.value == 4) { document.getElementById("abc").href="rotterdam"; }
+    else { document.getElementById("abc").href="eindhoven"; }
+ }
+ </script>

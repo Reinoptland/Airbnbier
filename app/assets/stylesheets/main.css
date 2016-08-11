@@ -26,7 +26,7 @@ div#main {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #EEC74A;    
+    color: #EEC74A;
 }
 
 body {
@@ -44,7 +44,8 @@ input.searchbutton:hover {
 
 .jumbotron{
   background-image: url(/assets/cheers-header.jpg);
-    background-size: cover;    
+    background-size: cover;
+    min-height: 90vh;
 
 }
 
@@ -73,14 +74,14 @@ input.searchbutton:hover {
 }
 
 .panel-body h1{
-    margin-top: 80px; 
+    margin-top: 80px;
     color: #fff;
     text-shadow: 1px 0px 1px #eee;
 }
 
 @media only screen and (min-width : 768px) {
         .panel-body h1{
-            margin-top: 60px;   
+            margin-top: 60px;
         }
     }
 
@@ -112,7 +113,7 @@ input.searchbutton:hover {
 
 .panel-horizontal .panel-heading {
     height: 200px;
-    background-size:cover; 
+    background-size:cover;
     background-position:center;
 }
 
