@@ -31,7 +31,14 @@
        <p><%= @location %></p>
         <p><%= @room.description %></p>
         <p>€ <%= @room.price.round %> per/day</p>
-        <%= render 'bookings/form', booking: @booking %>
+        <% if user_signed_in? %>
+<%= render 'bookings/form', booking: @booking %>
+
+<% else %>
+
+<h3> Please <%= link_to "login", '/users/sign_in' %> to make a reservation</h3>
+<% end %>
+        
       </div>
     </div>
   </div>
