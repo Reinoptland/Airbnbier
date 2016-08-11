@@ -10,11 +10,14 @@
 
     <body>
        <%= render "layouts/nav" %>
-        <div id="main" class="container-fluid">
-
-
+       <% if current_page?(root_path) %>
+           <%= render "layouts/jumbotron" %>
+       <% end %>
+        <div id="main" class="container">
            <%= yield %>
         </div>
+        
+         <%= render "layouts/footer" %>
 
     </body>
 </html>
