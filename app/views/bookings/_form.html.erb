@@ -11,7 +11,7 @@
     </div>
   <% end %>
   
-  <%= f.hidden_field :user_id, value: @user.id %>
+  <%= f.hidden_field :user_id, value: booking.user_id%>
   <%= f.hidden_field :room_id, value: booking.room_id %>
 
 
@@ -36,19 +36,19 @@
 <script>
 
     $(function(){
-        
+
         var array = '<%= @disabled.to_json %>';
         array.replace(/&quot;/g, '"');
-        
+
         $('.end_date').datepicker({
             dateFormat: "yy-mm-dd",
             beforeShowDay: function(date) {
             var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
             return [ array.indexOf(string) == -1 ]
         }
-            
+
         });
-        
+
         $('.start_date').datepicker({
             dateFormat: "yy-mm-dd",
             beforeShowDay: function(date) {
