@@ -32,7 +32,10 @@ class RoomsController < ApplicationController
 
   # GET /rooms/new
   def new
-    @room = Room.new
+    if current_user
+      user = current_user
+      @room = Room.new({user_id: user.id})
+    end
   end
 
   # GET /rooms/1/edit
@@ -87,6 +90,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:name, :description, :price, :image_url, :location_id)
+      params.require(:room).permit(:name, :description, :price, :image_url, :location_id, :user_id)
     end
 end
