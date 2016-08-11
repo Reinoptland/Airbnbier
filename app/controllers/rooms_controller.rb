@@ -22,8 +22,10 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
+    if current_user
       user = current_user
       @booking = Booking.new({room_id: params[:id], user_id: user.id})
+    end
       @disabled = Room.find(params[:id]).taken_dates
       @location = Room.find(params[:id]).location.name
   end
