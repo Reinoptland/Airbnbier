@@ -3,7 +3,8 @@ class Booking < ApplicationRecord
     belongs_to :user
 
     validates_presence_of :start_date, :end_date
-
+    validates_date :start_date, :on_or_after => Date.today
+    validates_date :end_date, :after => :start_date
 
     def ranger
         a = start_date.strftime("%Y-%m-%d")
