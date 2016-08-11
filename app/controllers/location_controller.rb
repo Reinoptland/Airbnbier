@@ -1,7 +1,7 @@
 class LocationController < ApplicationController
 
   def amsterdam_rooms
-    @rooms = Room.all
+    @rooms = Room.where location_id: 1
   end
 
   def utrecht_rooms
