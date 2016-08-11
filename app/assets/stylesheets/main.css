@@ -3,6 +3,9 @@
   padding-right: 0px;
 }
 
+div#main {
+    min-height: 100vh;
+}
 
 .logo_footer {
   height: 75px;
