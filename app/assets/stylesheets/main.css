@@ -178,16 +178,7 @@ input[type=date]::-webkit-inner-spin-button {
     display: none;
 }
 
-h2 {
-  color: white;
-  font-style: italic;
-  font-size: 1.5em;
-  margin-top: 25%;
-  z-index: 1;
-  position:relative;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  text-transform: capitalize;
-}
+
 
 .amount {
   font-size: 1.5em;
