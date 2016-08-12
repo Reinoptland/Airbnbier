@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  
+
   <%= f.hidden_field :user_id, value: booking.user_id%>
   <%= f.hidden_field :room_id, value: booking.room_id %>
 
@@ -28,7 +28,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Book!", data: (booking.room.user == current_user  ?  { confirm:  "Are you sure you want to book your own room?"} : nil) %>
   </div>
 <% end %>
 
