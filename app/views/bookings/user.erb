@@ -19,7 +19,7 @@
         <td><%= booking.room.name %></td>
         <td><%= booking.start_date.strftime("%Y-%m-%d") %></td>
         <td><%= booking.end_date.strftime("%Y-%m-%d") %></td>
-        <td><%= booking.total_price %></td>
+        <td>€<%= booking.total_price %></td>
         <td><%= link_to 'Cancel', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
