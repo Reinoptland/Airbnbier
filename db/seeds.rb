@@ -17,12 +17,12 @@ Location.create([
 Room.delete_all
 
 Room.create([
-  {name: "Room 1", description: "Nice student room ", price: 34,  image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 1 , user: rein},
-  {name: "Room 2", description: "Cheap student room ", price: 20, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 1, user: rein},
-  {name: "Room 3", description: "Student room for party ppl!", price: 22, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 2, user: rein},
-  {name: "Room 4", description: "Student room with a nice view", price: 67, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 4, user: julian},
-  {name: "Room 5", description: "Luxurious student room", price: 76, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 2, user: timmo},
-  {name: "Room 6", description: "Small student room with nice roommates", price: 34, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 3, user: christiaan},
+  {name: "Room 1", description: "Nice student room ", price: 34,  image_url: "assets/appartments/room1", location_id: 1 , user: rein},
+  {name: "Room 2", description: "Cheap student room ", price: 20, image_url: "assets/appartments/room2", location_id: 1, user: rein},
+  {name: "Room 3", description: "Student room for party ppl!", price: 22, image_url: "assets/appartments/room3", location_id: 2, user: rein},
+  {name: "Room 4", description: "Student room with a nice view", price: 67, image_url: "assets/appartments/room4", location_id: 4, user: julian},
+  {name: "Room 5", description: "Luxurious student room", price: 76, image_url: "assets/appartments/room5", location_id: 2, user: timmo},
+  {name: "Room 6", description: "Small student room with nice roommates", price: 34, image_url: "assets/appartments/room6", location_id: 3, user: christiaan},
   {name: "Room 7", description: "Student room with seperate bathroom", price: 45, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 5, user: timmo},
   {name: "Room 8", description: "Student room near the city centre", price: 57, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 4, user: rein},
   {name: "Room 9", description: "Clean student room in nice neighborhood", price: 62, image_url: "https://hd.unsplash.com/photo-1444201983204-c43cbd584d93", location_id: 3, user: julian},
