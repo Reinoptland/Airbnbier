@@ -21,5 +21,7 @@ class Room < ApplicationRecord
         }
         dates.flatten
     end
+    
+    mount_uploader :image_url, ImageUploader
 
 end
