@@ -37,6 +37,13 @@
 
 <h3> Please <%= link_to "login", '/users/sign_in' %> to make a reservation</h3>
 <% end %>
+<% if current_user %>
+  <% if @user.id == @room.user_id %>
+  <br>
+    <p><%= link_to 'Edit', edit_room_path(@room), :class => "btn btn-primary btn-block" %></p>
+    <p><%= link_to 'Destroy', @room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-block" %></p>
+  <% end %>
+<% end %>
 
       </div>
     </div>

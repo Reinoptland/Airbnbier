@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rooms for <%= @user.email %></h1>
+<h1>Rooms for <%= @user.email %></h1><% if user_signed_in? %>
+<%= link_to 'Add new Room', new_room_path, :class => "btn btn-success " %>
+<% end %>
 
 <table class="table table-striped">
   <thead>
