@@ -3,7 +3,7 @@ class Room < ApplicationRecord
     belongs_to :user
     belongs_to :location
     validates_presence_of :price, :name
-    validates :price, numericality: { only_integer: true }
+    validates :price, numericality: { only_float: true }
 
     def self.order_by_price_desc
         order(price: :desc)
