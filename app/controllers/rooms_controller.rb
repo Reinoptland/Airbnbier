@@ -45,6 +45,11 @@ class RoomsController < ApplicationController
   def edit
   end
 
+  def user
+    @user = current_user
+    @rooms = @user.rooms
+  end
+
   # POST /rooms
   # POST /rooms.json
   def create
