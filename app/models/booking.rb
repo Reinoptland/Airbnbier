@@ -21,4 +21,9 @@ class Booking < ApplicationRecord
         (a..b).map { |date| date }
     end
 
+    def total_price
+
+      (self.ranger.size) * self.room.price 
+    end
+
 end
