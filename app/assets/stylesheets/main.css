@@ -223,6 +223,14 @@ a:hover {
   background-color: transparent;
 }
 
+a:visited {
+    color: #fff;
+}
+
+.navbar-default .navbar-text {
+    color: orange;
+}
+
 .all-rooms-container {
     margin-top: 50px;
 }
