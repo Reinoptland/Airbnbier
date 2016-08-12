@@ -3,7 +3,7 @@
 <%= link_to 'Show me cheap rooms!', allrooms_priceasc_path, :class => "btn btn-success " %>
 <%= link_to 'Show me luxurious rooms!', allrooms_pricedesc_path, :class => "btn btn-success " %>
 
-<% user_signed_in %>
+<% if user_signed_in? %>
 <%= link_to 'Add new Room', new_room_path, :class => "btn btn-success " %>
 <% end %>
 <% @rooms.each do |room| %>
