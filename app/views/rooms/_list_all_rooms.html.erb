@@ -21,7 +21,7 @@
             <% if current_user %>
               <% if @user.id == room.user_id %>
                 <p><%= link_to 'Edit', edit_room_path(room), :class => "btn btn-primary btn-block" %></p>
-                <p><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-block" %></p>
+                <p><%= link_to 'Delete', room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-block" %></p>
               <% end %>
             <% end %>
         </div>
