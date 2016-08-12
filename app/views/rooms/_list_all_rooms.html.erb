@@ -3,8 +3,9 @@
 <%= link_to 'Show me cheap rooms!', allrooms_priceasc_path, :class => "btn btn-success " %>
 <%= link_to 'Show me luxurious rooms!', allrooms_pricedesc_path, :class => "btn btn-success " %>
 
-
+<% if user_signed_in? %>
 <%= link_to 'Add new Room', new_room_path, :class => "btn btn-success " %>
+<% end %>
 <% @rooms.each do |room| %>
     <div class="panel panel-default panel-horizontal">
         <div class="panel-heading" style="background-image:url('<%= room.image_url %>');">
