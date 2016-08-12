@@ -12,5 +12,4 @@ class Booking < ApplicationRecord
         (a..b).map { |date| date }
     end
 
-    end
 end
