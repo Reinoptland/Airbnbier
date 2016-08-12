@@ -20,6 +20,7 @@
                         <li><%= link_to "Log In", new_user_session_path %></li>
                     <% else %>
                         <li><%= link_to "My Bookings", user_bookings_path %></li>
+                        <li><%= link_to "My Rooms", user_rooms_path %></li>
                         <li><span class="navbar-text"><%= current_user.email %></span></li>
                         <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
                     <% end %>
