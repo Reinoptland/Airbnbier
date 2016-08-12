@@ -16,8 +16,10 @@
             </div>
         <div class="panel-footer">
             <p><%= link_to 'Show', room, :class => "btn btn-success btn-block" %></p>
+            <% if @user.id == room.user_id %>
             <p><%= link_to 'Edit', edit_room_path(room), :class => "btn btn-primary btn-block" %></p>
             <p><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-block" %></p>
+            <% end %>
         </div>
     </div>
 <% end %>

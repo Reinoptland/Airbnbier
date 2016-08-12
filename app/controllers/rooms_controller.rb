@@ -8,14 +8,17 @@ class RoomsController < ApplicationController
   end
 
   def list_all_rooms
+    @user = current_user
     @rooms = Room.all
   end
 
   def list_all_rooms_price_asc
+    @user = current_user
     @rooms = Room.order_by_price_asc
   end
 
   def list_all_rooms_price_desc
+    @user = current_user
     @rooms = Room.order_by_price_desc
   end
 
