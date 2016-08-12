@@ -11,4 +11,6 @@ class Booking < ApplicationRecord
         b = end_date.strftime("%Y-%m-%d")
         (a..b).map { |date| date }
     end
+
+    end
 end
