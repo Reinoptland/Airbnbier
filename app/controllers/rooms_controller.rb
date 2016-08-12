@@ -78,10 +78,14 @@ class RoomsController < ApplicationController
   # DELETE /rooms/1
   # DELETE /rooms/1.json
   def destroy
+    if @room.bookings.count > 0
+      redirect_to all_rooms_path, notice: 'You cannot delete a room with reservations, please contact Wouter@codaisseur.'
+    else
     @room.destroy
     respond_to do |format|
-      format.html { redirect_to all_rooms_path, notice: 'Room was successfully destroyed.' }
+      format.html { redirect_to all_rooms_path, notice: 'Room was successfully deleted' }
       format.json { head :no_content }
+      end
     end
   end
 
