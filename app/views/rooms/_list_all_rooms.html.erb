@@ -9,13 +9,14 @@
 <% @rooms.each do |room| %>
     <div class="panel panel-default panel-horizontal">
         <div class="panel-heading" style="background-image:url('<%= room.image_url %>');">
-        </div>
-        <div class="panel-body">
-            <h3><%= room.name %></h3>
-            <p><%= room.description %></p>
-            <p>Price: €<%= room.price.round %> per/day</p>
+          </div>
+            <div class="panel-body">
+              <h3><%= room.name %></h3>
+              <p><%= room.description %></p>
+              <p>Price: €<%= room.price.round %> per/day</p>
+              <p>City: <%= room.location.name %></p>
             </div>
-        <div class="panel-footer">
+          <div class="panel-footer">
             <p><%= link_to 'Show', room, :class => "btn btn-success btn-block" %></p>
             <% if current_user %>
               <% if @user.id == room.user_id %>
