@@ -6,7 +6,7 @@
                 <%= form_tag do %>
                   <%= select_tag(:location_id, options_from_collection_for_select(Location.all, :id, :name),:include_blank => 'Select a city', :class => 'form-control input-medium', :onChange=>"getOpt(this)") %>
                     <div class="button-plans">
-                        <a id="abc" class="btn btn-info" href="something"> Go! </a>
+                        <a id="abc" class="btn btn-info" href="allrooms"> Go! </a>
                     </div>
                 <% end %>
               </div>
