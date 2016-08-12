@@ -2,6 +2,7 @@ class Room < ApplicationRecord
     has_many :bookings
     belongs_to :user
     belongs_to :location
+    validates_presence_of :price, :name
 
     def self.order_by_price_desc
         order(price: :desc)
